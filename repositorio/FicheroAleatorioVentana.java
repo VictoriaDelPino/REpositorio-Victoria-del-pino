@@ -18,6 +18,7 @@ public class FicheroAleatorioVentana {
 		
 		VentanaDepart v = new VentanaDepart(f);
 		v.setVisible(true);
+		System.out.println("after commit");
 	   
 	}//fin main
 
