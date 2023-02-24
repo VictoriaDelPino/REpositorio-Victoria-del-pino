@@ -11,6 +11,13 @@ import java.io.RandomAccessFile;
 
 import javax.swing.*;
 
+
+/**
+ * Esta clase contienene todos los elementos de la ventana de departamento y todos los metodos 
+ * que se utilizan en ella
+ * @author DAM
+ * @version 1.0*/
+
 public class VentanaDepart extends JFrame implements ActionListener  {
 	
 private static final String NOEXISTEDEPART = "DEPARTAMENTO NO EXISTE.";
@@ -96,6 +103,11 @@ public VentanaDepart(JFrame f )
 	ver.addActionListener(this);
 }
 
+/**
+ * Indica cuando los datos obtenidos por la entrada entran en conflicto con la accion seleccionada,
+ * llama a los metodos que son seleccionado cuando la entrada si sea correcta 
+ * también limpia todos los campos*/
+
 public void actionPerformed(ActionEvent e) 
 {   int dep, confirm;
 	existedepart = "DEPARTAMENTO EXISTE.";
@@ -133,7 +145,9 @@ public void actionPerformed(ActionEvent e)
         loc.setText(" ");
 	}
 }
-
+/**
+ * Inserta en el archivo un nuevo departamento con los datos indicados en los campos de la ventana
+ * */
 private void metodoInsertar() {
 	int dep;
 	mensaje.setText(" has pulsado el boton alta");   
@@ -158,7 +172,9 @@ private void metodoInsertar() {
 			
 			 }
 }
-
+/**
+ * Modifica el departamento con los datos indicados en los campos de la ventana
+ * */
 private void metodoModificar() {
 	int dep;
 	int confirm;
@@ -188,7 +204,9 @@ private void metodoModificar() {
 	   catch (IOException ex2) 
 		   {mensaje.setText(" ERRORRR EN EL FICHERO. Fichero no existe. (MODIFICAR)");}
 }
-
+/**
+ * Consulta el departamento pedido en la ventana
+ * */
 private void metodoConsulta() {
 	int dep;
 	mensaje.setText(" has pulsado el boton alta");   
@@ -209,7 +227,9 @@ private void metodoConsulta() {
 	     catch (IOException ex2) 
 	      {mensaje.setText(" ERRORRR EN EL FICHERO. Fichero no existe. (ALTA)");}
 }
-
+/**
+ * Borra el departamento pedido por la ventana
+ * */
 private void metodoBorrar() {
 	int dep;
 	int confirm;
